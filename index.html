@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Page d'un clone de la messagerie gmail, par Ounissa">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./CSS/main.css">
     <link rel="shortcut icon" href="./asset/mail.png" type="image/x-icon">
     <title>Document</title>
 </head>
@@ -30,6 +30,68 @@
         <div>
             <a href="#"><img src="./asset/arrow.png" alt="scroll down"></a>
         </div>
+        <section id="create" role="form">
+            <h2>Une boite de réception entièrement repensée</h2>
+            <p>Avec les nouveaux onglet personnalisables, repérez immédiatement les
+                nouveaux messages et choisissez ceux que vous souhaiter lire en priorité</p>
+
+
+            <div class="inner-form" role="form" aria-labelledby="inscription">
+                <fieldset>
+                    <legend>Connectez-vous à votre compte</legend>
+                    <label for="nom">
+                        Nom
+                    </label> <!-- dans form, action, on met l'endroit ou on pose la requête, ici notre site à nous-->
+                    <form action="index.html" method="post">
+                        <input 
+                            id="nom"
+                            type="text"
+                            name="Nom"
+                            placeholder="Votre nom" 
+                            autofocus="true"
+                            aria-required="true"
+                            required>
+                    <label for="prenom">
+                        Prénom
+                    </label> <!-- dans form, action, on met l'endroit ou on pose la requête, ici notre site à nous-->
+                    <form action="index.html" method="post">
+                        <input 
+                            id="prenom"
+                            type="text"
+                            name="prenom"
+                            placeholder="Votre prénom" 
+                            autofocus="true"
+                            aria-required="true"
+                            required>
+                    <label for="mail">
+                        Mail
+                    </label> 
+                    <form action="index.html" method="post">
+                        <input 
+                            id="mail"
+                            type="mail"
+                            name="email"
+                            placeholder="votreMail@gmail.com" 
+                            autofocus="true"
+                            aria-required="true"
+                            required>
+                    <label for="mail">
+                        Mot de passe
+                    </label> 
+                    <form action="index.html" method="post">
+                        <input 
+                            id="motdepasse"
+                            type="password"
+                            name="motdepasse"
+                            placeholder="Saisissez un mot de passe" 
+                            autofocus="true"
+                            aria-required="true"
+                            required>                            
+                </fieldset>
+                
+            </div>
+            
+        </section>
     </main>
     
 </body>
