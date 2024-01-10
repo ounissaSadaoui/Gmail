@@ -38,7 +38,7 @@
 
             <div class="inner-form" role="form" aria-labelledby="inscription">
                 <fieldset>
-                    <legend>Connectez-vous à votre compte</legend>
+                    <legend>Créez un compte</legend>
                     <label for="nom">
                         Nom
                     </label> <!-- dans form, action, on met l'endroit ou on pose la requête, ici notre site à nous-->
@@ -86,9 +86,46 @@
                             placeholder="Saisissez un mot de passe" 
                             autofocus="true"
                             aria-required="true"
-                            required>                            
-                </fieldset>
-                
+                            required>     
+                            <input type="submit"
+                            value="Valider votre compte">                       
+                            </fieldset>
+            </div>
+            
+        </section>
+<!-- section de connexion-->
+        <section id="connexion" role="form">
+            <h2>Bienvenue dans votre espace </h2>
+            <div class="inner-form" role="form" aria-labelledby="connexion">
+                <fieldset>
+                    <legend>Connectez-vous à votre compte</legend>
+                    <label for="mail">
+                        Mail ou Login *
+                    </label> 
+                    <form action="index.html" method="post">
+                        <input 
+                            id="mail"
+                            type="mail"
+                            name="email"
+                            placeholder="votreMail@gmail.com" 
+                            autofocus="true"
+                            aria-required="true"
+                            required>
+                    <label for="mail">
+                        Mot de passe
+                    </label> 
+                    <form action="index.html" method="post">
+                        <input 
+                            id="motdepasse"
+                            type="password"
+                            name="motdepasse"
+                            placeholder="Saisissez un mot de passe" 
+                            autofocus="true"
+                            aria-required="true"
+                            required>     
+                            <input type="submit"
+                            value="Connexion à votre compte">                       
+                            </fieldset>
             </div>
             
         </section>
