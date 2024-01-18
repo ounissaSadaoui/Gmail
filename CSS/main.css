@@ -1,8 +1,8 @@
 /* Reset */
 html{
     font-size: 62.5%;
+    background :url(../asset/home-hero.jpg)center center/ cover fixed;
     scroll-behavior: smooth;
-    font: Open-Sans sans-serif;
 }
 body{
     font: 1.6rem Open-Sans sans-serif;
@@ -37,4 +37,51 @@ button {
   font-size: inherit;
   cursor: pointer;
 }
-/* Theme */
+/* Theme */ 
+@import url("/CSS/forms.css");
+
+#home_page {
+    background: url(../asset/home-hero.jpg) center center/ cover fixed;
+    height: 100vh;
+}
+
+
+#create_button{
+    background-color: rgb(190, 82, 92);
+    color: #f1f9f9c5;
+    margin-right: 70%;
+    margin-left: 10%;
+
+}
+#home_page p {
+    margin-left: 10%;
+    margin-right: 20%;
+    color: #f1f9f9c5;
+    font-size: xx-large bold;
+}
+#create_button p {
+    color: #f1f9f9c5;
+}
+head > #mail {
+font-size: 5.6rem;}
+
+#create {
+    height: 100vh;
+}
+
+#connexion{
+    height: 100vh;
+
+}
+.navbar {
+    position: fixed;
+    background-color: #fafafa;
+    width: 100%;
+    height: 10vh;
+    
+}
+
+.navbar > .navbar_left > a > img {
+width: 1vh;
+height: 1vh;
+}

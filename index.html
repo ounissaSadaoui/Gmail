@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Page d'un clone de la messagerie gmail, par Ounissa">
     <link rel="stylesheet" href="./CSS/main.css">
-    <link rel="shortcut icon" href="./asset/mail.png" type="image/x-icon">
+    <link id="mail" rel="shortcut icon" href="./asset/mail.png" type="image/x-icon">
+    <link rel="manifest" href="favicon/site.webmanifest">
     <title>Document</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
                 <a href="#home_page"><img src="./asset/mail.png" alt="icone d'acceuil gmail">Gmail</a>
             </div>
             <div class="navbar_right">
-                <a href="#pros"><button>Pour les pros</button></a>
+                <button><a href="#pros">Pour les pros</a></button>
                 <a href="#connexion"><button>Connexion</button></a>
                 <a href="#create"><button>Créer un compte</button></a>
             </div>
@@ -23,20 +24,24 @@
 
     </header>
     <main>
-        <div>
+        <section id="home_page" role="definition">
             <p>Retrouver la fluidité et la simplicité de Gmail sur tous vos appareils</p>
+            <div id="create_button">
             <a href="#create"><button>Créer un compte</button></a>
-        </div>
-        <div>
-            <a href="#"><img src="./asset/arrow.png" alt="scroll down"></a>
-        </div>
+            </div>
+            <div>
+                <a href="#"><img src="./asset/arrow.png" alt="scroll down"></a> 
+                </div>
+
+        </section>
+           
         <section id="create" role="form">
             <h2>Une boite de réception entièrement repensée</h2>
             <p>Avec les nouveaux onglet personnalisables, repérez immédiatement les
                 nouveaux messages et choisissez ceux que vous souhaiter lire en priorité</p>
 
 
-            <div class="inner-form" role="form" aria-labelledby="inscription">
+            <div class="inner-form" role="formulaire" aria-labelledby="inscription">
                 <fieldset>
                     <legend>Créez un compte</legend>
                     <label for="nom">
@@ -71,7 +76,7 @@
                             id="mail"
                             type="mail"
                             name="email"
-                            placeholder="votreMail@gmail.com" 
+                            placeholder="Saisissez votre Mail" 
                             autofocus="true"
                             aria-required="true"
                             required>
@@ -94,7 +99,7 @@
             
         </section>
 <!-- section de connexion-->
-        <section id="connexion" role="form">
+        <section id="connexion" role="formulaire">
             <h2>Bienvenue dans votre espace </h2>
             <div class="inner-form" role="form" aria-labelledby="connexion">
                 <fieldset>
