@@ -51,14 +51,14 @@ button {
     justify-content: space-between;
     align-items: center;
     background-color: white; /* Couleur de fond blanche */
-   /* padding:; /* Espace intérieur de la navbar avec marge à gauche et à droite de 20px */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère sous la navbar */
-    z-index: 1000; /* Assure que la navbar est au-dessus du contenu */
-    margin: 0; /* Marges nulles */
+   /* padding:; */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+    margin: 0; 
 }
 
 .navbar a, .navbar button {
-    color: black; /* Couleur du texte en noir */
+    color: black; 
     text-decoration: none;
 }
 
@@ -71,13 +71,10 @@ button {
     background-color: #FF0000; /* Couleur de fond rouge pour le bouton Créer un compte */
 }
 
-/*.navbar button,
-.navbar a {
-    margin-right: 10px; /* Marge à droite pour les liens et les boutons 
-}
+
 */
 .navbar-left img {
-    margin-right: 10px; /* Marge à droite pour séparer l'image du texte */
+    margin-right: 10px; 
 }
 /* Styles pour la section "home_page" */
 #home_page {
@@ -88,11 +85,21 @@ button {
     justify-content: center;
     align-items: flex-start;
     padding: 0 20px; /* Espace intérieur de 20px à gauche et à droite */
-
-    /* Ajout d'un dégradé de fond rouge pastel 
-    background: linear-gradient(to right, #FFCCCC, #FF9999);*/
 }
-
+    
+/*styple pour la secion de connexion */
+#connexion{
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 20px;
+    width: 100%;
+}
+h2{
+    text-align: center;
+}
 /* Styles pour le bouton "Create" */
 #home_page > #create_button {
     background-color: #d5473b; 
@@ -119,7 +126,19 @@ button[onclick*='#create'] {
     padding: 2rem;
     margin: 0;
 }
+button[onclick*='#connexion']:hover {
+    background-color:#d5473b;
+    padding: 2rem;
+    margin: 0;
+}
+button[onclick*='#pros']:hover {
+    background-color:#d5473b;
+    padding: 2rem;
+    margin: 0;
+}
 button :hover{
     background-color: #d5473b;
 }
+.connexion {
 
+}

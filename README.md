@@ -18,3 +18,5 @@ on utilise une navbar pour les boutons de navigation du haut de la page, ainsi q
 Une fois le squelette html prêt, on peut commencer à mettre en forme en css.
 je vais au début tout mettre dans une même page "main.css"
 ou il y a aura un reset, puis un thème
+
+

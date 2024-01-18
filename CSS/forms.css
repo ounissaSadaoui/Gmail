@@ -13,32 +13,33 @@
 
 }
 .form-creation {
-    width: 70%; /* Largeur de 40% de l'écran */
-    margin: 0 auto; /* Centrer le formulaire horizontalement */
+    width: 70%; 
+    margin: 0 auto; 
+    padding-top: 5rem;
 }
 
 /* Styles pour le formulaire */
 .form-creation form {
-    width: 100%; /* Occupe toute la largeur du conteneur parent */
+    width: 100%; 
 }
 
 /* Styles pour le fieldset */
 .form-creation fieldset {
-    border: 1px solid #ccc; /* Bordure légère autour du fieldset */
-    padding: 10px; /* Espace intérieur du fieldset */
-    margin: 10px 0; /* Marge autour du fieldset */
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    margin: 10px 0; 
 }
 
 /* Styles pour les labels */
 .form-creation label {
     display: block; /* Affiche chaque label sur une ligne */
-    margin-bottom: 5px; /* Marge en bas pour séparer les labels */
+    margin-bottom: 5px; 
 }
 
 /* Styles pour les champs de saisie */
 .form-creation input {
     width: calc(100% - 22px); /* Largeur de 100% moins la marge intérieure */
-    padding: 5px; /* Espace intérieur pour les champs de saisie */
+    padding: 5px; 
     margin-bottom: 10px; /* Marge en bas pour séparer les champs */
 }
 input[type="submit"][value="Valider votre compte"] {
@@ -46,4 +47,58 @@ input[type="submit"][value="Valider votre compte"] {
         width: 40%;
         height: 10vh;
         text-align: center;
+}
+
+/* 2ème formuliare */
+/* Styles pour le conteneur du formulaire de connexion */
+#connexion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Styles pour le formulaire de connexion 
+#connexion form {
+    width: 70%;
+    margin: 0 auto;
+}*/
+
+/* Styles pour le fieldset du formulaire de connexion */
+#connexion fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Styles pour les labels du formulaire de connexion */
+#connexion label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Styles pour les champs de saisie du formulaire de connexion */
+#connexion input {
+    width: calc(100% - 22px);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* Styles pour le bouton de soumission du formulaire de connexion */
+#connexion input[type="submit"] {
+    background-color: #1a73e8; /* Couleur de fond verte */
+    color: white; /* Texte en blanc */
+    border: none;
+ /*   padding: 10px 20px;*/
+    cursor: pointer;
+}
+.inner-form {
+    width: 70%;
+    margin: auto;
+}
+input[type="submit"][value="Connexion à votre compte"] {
+    background-color: #1a73e8;
+    width: 40%;
+    height: 10vh;
+    text-align: center;
 }
