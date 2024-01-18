@@ -41,6 +41,7 @@ button {
 @import url("/CSS/forms.css");
 
 #home_page {
+    margin-top: 10vh;
     background: url(../asset/home-hero.jpg) center center/ cover fixed;
     height: 100vh;
 }
@@ -66,14 +67,17 @@ head > #mail {
 font-size: 5.6rem;}
 
 #create {
+    margin-top: 10vh;
     height: 100vh;
 }
 
 #connexion{
+    margin-top: 10vh;
     height: 100vh;
 
 }
 .navbar {
+    margin-top: 0rem;
     position: fixed;
     background-color: #fafafa;
     width: 100%;

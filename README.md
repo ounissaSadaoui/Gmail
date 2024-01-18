@@ -1,5 +1,6 @@
 # Création d'un "clone" de Gmail:
 ## Première étape: Création d'une version statique de la page:
+lien vers le déploiement de la page: https://ounissasadaoui.github.io/Gmail/
 * on commence par la page d'acceuil, elle doit ressembler à ceci:
 ![Image du résultat attendu](./asset/page_accueil.png) 
 * La page de connexion sera celle-ci: 
