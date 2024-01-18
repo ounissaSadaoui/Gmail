@@ -3,138 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Page d'un clone de la messagerie gmail, par Ounissa">
+    <meta name="description" content="Page d'un clone de la messagerie Gmail, par Ounissa">
     <link rel="stylesheet" href="./CSS/main.css">
-    <link id="mail" rel="shortcut icon" href="./asset/mail.png" type="image/x-icon">
+    <link id="mail-icon" rel="shortcut icon" href="./asset/mail.png" type="image/x-icon">
     <link rel="manifest" href="favicon/site.webmanifest">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="navbar_left">
-                <a href="#home_page"><img src="./asset/mail.png" alt="icone d'acceuil gmail">Gmail</a>
+        <nav class="navbar" role="navigation">
+            <div class="navbar-left">
+                <button onclick="window.location.href='#home_page'">
+                    <img src="./asset/mail.png" alt="icone d'accueil Gmail">Gmail
+                </button>
             </div>
-            <div class="navbar_right">
-                <button><a href="#pros">Pour les pros</a></button>
-                <a href="#connexion"><button>Connexion</button></a>
-                <a href="#create"><button>Créer un compte</button></a>
+            <div class="navbar-right">
+                <button onclick="window.location.href='#pros'">Pour les pros</button>
+                <button onclick="window.location.href='#connexion'">Connexion</button>
+                <button onclick="window.location.href='#create'">Créer un compte</button>
             </div>
         </nav>
-
     </header>
+
     <main>
-        <section id="home_page" role="definition">
-            <p>Retrouver la fluidité et la simplicité de Gmail sur tous vos appareils</p>
+        <section id="home_page" role="region" aria-label="Introduction">
+            <p>Retrouvez la fluidité et la simplicité de Gmail sur tous vos appareils</p>
             <div id="create_button">
-            <a href="#create"><button>Créer un compte</button></a>
+                <button onclick="window.location.href='#create'">Créer un compte</button>
             </div>
             <div>
-                <a href="#"><img src="./asset/arrow.png" alt="scroll down"></a> 
-                </div>
-
+                <a href="#create"><img src="./asset/arrow.png" alt="scroll down"></a>
+            </div>
         </section>
-           
-        <section id="create" role="form">
-            <h2>Une boite de réception entièrement repensée</h2>
-            <p>Avec les nouveaux onglet personnalisables, repérez immédiatement les
-                nouveaux messages et choisissez ceux que vous souhaiter lire en priorité</p>
 
+        <section id="create" role="region" aria-label="Création de compte">
+            <h2>Une boîte de réception entièrement repensée</h2>
+            <p>Avec les nouveaux onglets personnalisables, repérez immédiatement les nouveaux messages et choisissez ceux que vous souhaitez lire en priorité</p>
 
-            <div class="inner-form" role="formulaire" aria-labelledby="inscription">
-                <fieldset>
-                    <legend>Créez un compte</legend>
-                    <label for="nom">
-                        Nom
-                    </label> <!-- dans form, action, on met l'endroit ou on pose la requête, ici notre site à nous-->
-                    <form action="index.html" method="post">
+            <div class="form-creation" role="form" aria-labelledby="inscription">
+                <form action="index.html" method="post">
+                    <fieldset>
+                        <legend>Créez un compte</legend>
+                        
+                        <label for="nom">
+                            Nom
+                        </label>
                         <input 
                             id="nom"
                             type="text"
                             name="Nom"
                             placeholder="Votre nom" 
-                            autofocus="true"
                             aria-required="true"
                             required>
-                    <label for="prenom">
-                        Prénom
-                    </label> <!-- dans form, action, on met l'endroit ou on pose la requête, ici notre site à nous-->
-                    <form action="index.html" method="post">
+                        
+                        <label for="prenom">
+                            Prénom
+                        </label>
                         <input 
                             id="prenom"
                             type="text"
                             name="prenom"
                             placeholder="Votre prénom" 
-                            autofocus="true"
                             aria-required="true"
                             required>
-                    <label for="mail">
-                        Mail
-                    </label> 
-                    <form action="index.html" method="post">
+                        
+                        <label for="email">
+                            Mail
+                        </label>
                         <input 
-                            id="mail"
-                            type="mail"
+                            id="email"
+                            type="email"
                             name="email"
                             placeholder="Saisissez votre Mail" 
-                            autofocus="true"
                             aria-required="true"
                             required>
-                    <label for="mail">
-                        Mot de passe
-                    </label> 
-                    <form action="index.html" method="post">
+                        
+                        <label for="motdepasse">
+                            Mot de passe
+                        </label>
                         <input 
                             id="motdepasse"
                             type="password"
                             name="motdepasse"
                             placeholder="Saisissez un mot de passe" 
-                            autofocus="true"
                             aria-required="true"
-                            required>     
-                            <input type="submit"
-                            value="Valider votre compte">                       
-                            </fieldset>
+                            required>
+                        
+                        <input type="submit" value="Valider votre compte">                       
+                    </fieldset>
+                </form>
             </div>
-            
         </section>
-<!-- section de connexion-->
-        <section id="connexion" role="formulaire">
-            <h2>Bienvenue dans votre espace </h2>
+
+        <!-- section de connexion-->
+        <section id="connexion" role="region" aria-label="Connexion">
+            <h2>Bienvenue dans votre espace</h2>
             <div class="inner-form" role="form" aria-labelledby="connexion">
-                <fieldset>
-                    <legend>Connectez-vous à votre compte</legend>
-                    <label for="mail">
-                        Mail ou Login *
-                    </label> 
-                    <form action="index.html" method="post">
+                <form action="index.html" method="post">
+                    <fieldset>
+                        <legend>Connectez-vous à votre compte</legend>
+                        
+                        <label for="login-mail">
+                            Mail ou Login *
+                        </label>
                         <input 
-                            id="mail"
-                            type="mail"
+                            id="login-mail"
+                            type="email"
                             name="email"
                             placeholder="votreMail@gmail.com" 
-                            autofocus="true"
                             aria-required="true"
                             required>
-                    <label for="mail">
-                        Mot de passe
-                    </label> 
-                    <form action="index.html" method="post">
+                        
+                        <label for="login-motdepasse">
+                            Mot de passe
+                        </label>
                         <input 
-                            id="motdepasse"
+                            id="login-motdepasse"
                             type="password"
                             name="motdepasse"
                             placeholder="Saisissez un mot de passe" 
-                            autofocus="true"
                             aria-required="true"
-                            required>     
-                            <input type="submit"
-                            value="Connexion à votre compte">                       
-                            </fieldset>
+                            required>
+                        
+                        <input type="submit" value="Connexion à votre compte">                       
+                    </fieldset>
+                </form>
             </div>
-            
         </section>
     </main>
-    
 </body>
 </html>

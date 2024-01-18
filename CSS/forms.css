@@ -1,8 +1,49 @@
-#create {
+/* Styles pour le conteneur du formulaire */
+#create{
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#create > p{
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+
+}
+.form-creation {
+    width: 70%; /* Largeur de 40% de l'écran */
+    margin: 0 auto; /* Centrer le formulaire horizontalement */
 }
 
-#connexion{
-    height: 100vh;
+/* Styles pour le formulaire */
+.form-creation form {
+    width: 100%; /* Occupe toute la largeur du conteneur parent */
+}
 
+/* Styles pour le fieldset */
+.form-creation fieldset {
+    border: 1px solid #ccc; /* Bordure légère autour du fieldset */
+    padding: 10px; /* Espace intérieur du fieldset */
+    margin: 10px 0; /* Marge autour du fieldset */
+}
+
+/* Styles pour les labels */
+.form-creation label {
+    display: block; /* Affiche chaque label sur une ligne */
+    margin-bottom: 5px; /* Marge en bas pour séparer les labels */
+}
+
+/* Styles pour les champs de saisie */
+.form-creation input {
+    width: calc(100% - 22px); /* Largeur de 100% moins la marge intérieure */
+    padding: 5px; /* Espace intérieur pour les champs de saisie */
+    margin-bottom: 10px; /* Marge en bas pour séparer les champs */
+}
+input[type="submit"][value="Valider votre compte"] {
+        background-color: #1a73e8;
+        width: 40%;
+        height: 10vh;
+        text-align: center;
 }

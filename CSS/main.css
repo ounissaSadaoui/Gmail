@@ -1,7 +1,9 @@
 /* Reset */
+
+@import url("forms.css");
+
 html{
     font-size: 62.5%;
-    background :url(../asset/home-hero.jpg)center center/ cover fixed;
     scroll-behavior: smooth;
 }
 body{
@@ -13,7 +15,7 @@ body{
 }
 h1,h2, h3, h4, h5, h6, p,
 ol, ul, figure, div{
-    margin: auto;
+    margin: 0;
     padding: 1rem;
     list-style: none;
 }
@@ -37,55 +39,87 @@ button {
   font-size: inherit;
   cursor: pointer;
 }
-/* Theme */ 
-@import url("/CSS/forms.css");
-
-#home_page {
-    margin-top: 10vh;
-    background: url(../asset/home-hero.jpg) center center/ cover fixed;
-    height: 100vh;
-}
-
-
-#create_button{
-    background-color: rgb(190, 82, 92);
-    color: #f1f9f9c5;
-    margin-right: 70%;
-    margin-left: 10%;
-
-}
-#home_page p {
-    margin-left: 10%;
-    margin-right: 20%;
-    color: #f1f9f9c5;
-    font-size: xx-large bold;
-}
-#create_button p {
-    color: #f1f9f9c5;
-}
-head > #mail {
-font-size: 5.6rem;}
-
-#create {
-    margin-top: 10vh;
-    height: 100vh;
-}
-
-#connexion{
-    margin-top: 10vh;
-    height: 100vh;
-
-}
+/* Theme*
+/* Styles pour la barre de navigation */
 .navbar {
-    margin-top: 0rem;
-    position: fixed;
-    background-color: #fafafa;
+    position: fixed; /* Position fixée */
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 10vh;
-    
+    height: 10vh; /* Hauteur de 10 vh */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white; /* Couleur de fond blanche */
+   /* padding:; /* Espace intérieur de la navbar avec marge à gauche et à droite de 20px */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère sous la navbar */
+    z-index: 1000; /* Assure que la navbar est au-dessus du contenu */
+    margin: 0; /* Marges nulles */
 }
 
-.navbar > .navbar_left > a > img {
-width: 1vh;
-height: 1vh;
+.navbar a, .navbar button {
+    color: black; /* Couleur du texte en noir */
+    text-decoration: none;
 }
+
+.navbar button {
+    background-color: white; /* Fond blanc pour tous les boutons */
+    margin-left: auto; 
+}
+
+#createButton {
+    background-color: #FF0000; /* Couleur de fond rouge pour le bouton Créer un compte */
+}
+
+/*.navbar button,
+.navbar a {
+    margin-right: 10px; /* Marge à droite pour les liens et les boutons 
+}
+*/
+.navbar-left img {
+    margin-right: 10px; /* Marge à droite pour séparer l'image du texte */
+}
+/* Styles pour la section "home_page" */
+#home_page {
+    background :url(../asset/home-hero.jpg) center center/ cover fixed;
+    height: 100vh; /* Hauteur de 100 vh pour prendre toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 20px; /* Espace intérieur de 20px à gauche et à droite */
+
+    /* Ajout d'un dégradé de fond rouge pastel 
+    background: linear-gradient(to right, #FFCCCC, #FF9999);*/
+}
+
+/* Styles pour le bouton "Create" */
+#home_page > #create_button {
+    background-color: #d5473b; 
+    color: white; 
+   /* height: 10vh;
+    width: 40vh;*/
+    font-size: 2rem; 
+    border: none; 
+    cursor: pointer;
+    margin-left:6% ;
+}
+
+/* Styles pour le texte au-dessus du bouton */
+#home_page p {
+    font-size: 4rem; /* Taille de police plus grande */
+    color: white; /* Texte en blanc */
+    margin-bottom: 20px; /* Marge en bas pour séparer du bouton */
+    margin-right: 45%;
+    margin-left: 5%;
+    line-height: 5rem;
+}
+button[onclick*='#create'] {
+    background-color:#d5473b;
+    padding: 2rem;
+    margin: 0;
+}
+button :hover{
+    background-color: #d5473b;
+}
+
