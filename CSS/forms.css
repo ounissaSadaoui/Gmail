@@ -6,47 +6,52 @@
     justify-content: center;
     align-items: flex-start;
 }
-#create > p{
-    text-align: center;
-    margin-left: 20%;
-    margin-right: 20%;
 
-}
 .form-creation {
-    width: 70%; 
+    width: 55%; 
     margin: 0 auto; 
     padding-top: 5rem;
+
+}
+form legend {
+    font-size: larger;
 }
 
-/* Styles pour le formulaire */
-.form-creation form {
-    width: 100%; 
-}
 
 /* Styles pour le fieldset */
 .form-creation fieldset {
-    border: 1px solid #ccc; 
-    padding: 10px; 
-    margin: 10px 0; 
+    border: 1rem light #787575; 
+    padding-top: 3rem; 
+    padding-bottom: .1rem; 
+    padding-right: 1rem; 
+    padding-left: 1rem; 
+    margin: 1rem 0; 
+    border-radius: 3rem;
 }
 
 /* Styles pour les labels */
 .form-creation label {
     display: block; /* Affiche chaque label sur une ligne */
-    margin-bottom: 5px; 
+    margin-bottom: .5rem; 
 }
 
 /* Styles pour les champs de saisie */
 .form-creation input {
-    width: calc(100% - 22px); /* Largeur de 100% moins la marge intérieure */
-    padding: 5px; 
-    margin-bottom: 10px; /* Marge en bas pour séparer les champs */
+    width: calc(100% - 2.2rem); /* Largeur de 100% moins la marge intérieure */
+    padding: .5rem; 
+    margin-bottom: 1.0rem; /* Marge en bas pour séparer les champs */
+    background-color: #dfdcdc;
+
 }
-input[type="submit"][value="Valider votre compte"] {
-        background-color: #1a73e8;
-        width: 40%;
-        height: 10vh;
-        text-align: center;
+input[type="submit"][value="VALIDER VOTRE COMPTE"] {
+    color: #fafafa;
+    width: 45%;
+    height: 9vh;
+    text-align: center;
+    background-color:#2753ce;
+    margin-left: 27%;
+    margin-right: 27%;
+
 }
 
 /* 2ème formuliare */
@@ -58,47 +63,66 @@ input[type="submit"][value="Valider votre compte"] {
     height: 100vh;
 }
 
+
 /* Styles pour le formulaire de connexion 
 #connexion form {
     width: 70%;
     margin: 0 auto;
 }*/
+#connexion fieldset{
+    max-height: fit-content;
+}
 
 /* Styles pour le fieldset du formulaire de connexion */
 #connexion fieldset {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px 0;
+    border: 1rem light #787575; 
+    padding-top: 3rem; 
+    padding-bottom: 3rem; 
+    padding-right: 1rem; 
+    padding-left: 1rem; 
+    margin: 1rem 0; 
+    border-radius: 3rem;
 }
 
 /* Styles pour les labels du formulaire de connexion */
 #connexion label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: .5rem;
 }
 
 /* Styles pour les champs de saisie du formulaire de connexion */
 #connexion input {
-    width: calc(100% - 22px);
-    padding: 5px;
-    margin-bottom: 10px;
+    width: calc(100% - 2.2rem);
+    padding: .5rem;
+    margin-bottom: 1rem;
+    background-color: #dfdcdc;
 }
 
 /* Styles pour le bouton de soumission du formulaire de connexion */
 #connexion input[type="submit"] {
-    background-color: #1a73e8; /* Couleur de fond verte */
+    background-color: #2753ce; 
     color: white; /* Texte en blanc */
     border: none;
- /*   padding: 10px 20px;*/
+    padding: 10px 20px;
     cursor: pointer;
+    margin-left: 27%;
+    margin-left: 27%;
+    width: 45%; 
+    height: 7vh;
+
 }
 .inner-form {
-    width: 70%;
-    margin: auto;
+    width: 55%; 
+    margin: 0 auto; 
+    padding-top: 5rem;
 }
-input[type="submit"][value="Connexion à votre compte"] {
-    background-color: #1a73e8;
-    width: 40%;
-    height: 10vh;
-    text-align: center;
+
+.inner-form fieldset{
+    border: 1rem light #787575; 
+    padding-top: 3rem; 
+    padding-bottom: 3rem; 
+    padding-right: 1rem; 
+    padding-left: 1rem; 
+    margin: 1rem 0; 
+    border-radius: 3rem;
 }

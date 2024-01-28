@@ -19,12 +19,14 @@ ol, ul, figure, div{
     padding: 1rem;
     list-style: none;
 }
+
 *{
     box-sizing: border-box;
 }
 a{
     text-decoration: none;
 }
+
 img{
     height: 100%;
     width: 100%;
@@ -52,14 +54,20 @@ button {
     align-items: center;
     background-color: white; /* Couleur de fond blanche */
    /* padding:; */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.1); 
     z-index: 1000; 
     margin: 0; 
 }
 
 .navbar a, .navbar button {
-    color: black; 
+    color: rgb(57, 53, 53); 
     text-decoration: none;
+}
+.navbar img{
+    width: 6vh;
+    height: 6vh;
+    z-index: -1;
+
 }
 
 .navbar button {
@@ -72,9 +80,8 @@ button {
 }
 
 
-*/
 .navbar-left img {
-    margin-right: 10px; 
+    margin-right: 1rem; 
 }
 /* Styles pour la section "home_page" */
 #home_page {
@@ -84,7 +91,7 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0 20px; /* Espace intérieur de 20px à gauche et à droite */
+    padding: 0 2vh; /* Espace intérieur de 20px à gauche et à droite */
 }
     
 /*styple pour la secion de connexion */
@@ -94,11 +101,38 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0 20px;
+    padding: 0 2vh;
     width: 100%;
 }
-h2{
+#create > h2{
+    max-width: 40%;
     text-align: center;
+    margin: auto;
+    margin-top: 10rem;
+    font-size: 2.6rem;
+    line-height: 2.6rem;
+    color: rgb(57, 53, 53); 
+
+}
+
+#create > p{
+    margin-top: 15rem;
+    margin: auto;
+    text-align: center ;
+    max-width: 35%;
+    font-size: 1.2rem;
+    color: rgb(57, 53, 53); 
+
+    
+}
+#connexion > h2 {
+    max-width: 40%;
+    text-align: center;
+    margin: auto;
+    margin-top: 10rem;
+    font-size: 2.6rem;
+    line-height: 2.6rem;
+    color: rgb(57, 53, 53); 
 }
 /* Styles pour le bouton "Create" */
 #home_page > #create_button {
@@ -114,10 +148,10 @@ h2{
 
 /* Styles pour le texte au-dessus du bouton */
 #home_page p {
-    font-size: 4rem; /* Taille de police plus grande */
+    font-size: 3.6rem; /* Taille de police plus grande */
     color: white; /* Texte en blanc */
-    margin-bottom: 20px; /* Marge en bas pour séparer du bouton */
-    margin-right: 45%;
+    margin-bottom: 2vh; /* Marge en bas pour séparer du bouton */
+    margin-right: 55%;
     margin-left: 5%;
     line-height: 5rem;
 }
@@ -125,19 +159,26 @@ button[onclick*='#create'] {
     background-color:#d5473b;
     padding: 2rem;
     margin: 0;
+    color: #fafafa;
+
 }
 button[onclick*='#connexion']:hover {
     background-color:#d5473b;
     padding: 2rem;
     margin: 0;
+    color: #fafafa;
+
 }
 button[onclick*='#pros']:hover {
     background-color:#d5473b;
     padding: 2rem;
     margin: 0;
+    color: #fafafa;
 }
 button :hover{
     background-color: #d5473b;
+    color: #fafafa;
+
 }
 .connexion {
 
