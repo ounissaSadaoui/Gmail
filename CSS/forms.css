@@ -6,7 +6,9 @@
     justify-content: center;
     align-items: flex-start;
 }
-
+fieldset{
+    border-color: #f5eded;
+}
 .form-creation {
     width: 55%; 
     margin: 0 auto; 
@@ -16,17 +18,14 @@
 form legend {
     font-size: larger;
 }
-
-
 /* Styles pour le fieldset */
 .form-creation fieldset {
-    border: 1rem light #787575; 
     padding-top: 3rem; 
     padding-bottom: .1rem; 
     padding-right: 1rem; 
     padding-left: 1rem; 
     margin: 1rem 0; 
-    border-radius: 3rem;
+    border-radius: .8rem;
 }
 
 /* Styles pour les labels */
@@ -36,11 +35,15 @@ form legend {
 }
 
 /* Styles pour les champs de saisie */
-.form-creation input {
+input {
     width: calc(100% - 2.2rem); /* Largeur de 100% moins la marge intérieure */
-    padding: .5rem; 
+    padding: .8rem; 
     margin-bottom: 1.0rem; /* Marge en bas pour séparer les champs */
-    background-color: #dfdcdc;
+    background-color: #f5eded;
+    border-radius: .8rem;
+    border-color: #fafafa;
+    border-top: none;
+    border-left: none;
 
 }
 input[type="submit"][value="VALIDER VOTRE COMPTE"] {
@@ -64,18 +67,8 @@ input[type="submit"][value="VALIDER VOTRE COMPTE"] {
 }
 
 
-/* Styles pour le formulaire de connexion 
-#connexion form {
-    width: 70%;
-    margin: 0 auto;
-}*/
-#connexion fieldset{
-    max-height: fit-content;
-}
-
 /* Styles pour le fieldset du formulaire de connexion */
 #connexion fieldset {
-    border: 1rem light #787575; 
     padding-top: 3rem; 
     padding-bottom: 3rem; 
     padding-right: 1rem; 
@@ -92,7 +85,7 @@ input[type="submit"][value="VALIDER VOTRE COMPTE"] {
 
 /* Styles pour les champs de saisie du formulaire de connexion */
 #connexion input {
-    width: calc(100% - 2.2rem);
+    width: calc(100% - 2rem);
     padding: .5rem;
     margin-bottom: 1rem;
     background-color: #dfdcdc;
@@ -118,7 +111,7 @@ input[type="submit"][value="VALIDER VOTRE COMPTE"] {
 }
 
 .inner-form fieldset{
-    border: 1rem light #787575; 
+    border: 1rem light #e6dfdf; 
     padding-top: 3rem; 
     padding-bottom: 3rem; 
     padding-right: 1rem; 
