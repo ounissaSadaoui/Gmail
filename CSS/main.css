@@ -1,13 +1,13 @@
 /* Reset */
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto+Slab:wght@100;200;300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300&display=swap');
 @import url("forms.css");
 
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
+    font-family: 'Open Sans' sans-serif 1.6;
 }
 body{
-    font: 1.6rem Open-Sans sans-serif;
     margin: 0;
     line-height: 1.6rem;
     letter-spacing: .1rem;
@@ -19,6 +19,11 @@ ol, ul, figure, div{
     padding: 1rem;
     list-style: none;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 
 *{
     box-sizing: border-box;
@@ -51,34 +56,59 @@ button {
     height: 10vh; /* Hauteur de 10 vh */
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: white; /* Couleur de fond blanche */
+    background-color:#fafafa; /* Couleur de fond blanche */
    /* padding:; */
     box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.1); 
-    z-index: 1000; 
     margin: 0; 
 }
+/* style pour ma navbar */
+li {
+    display: inline;
+    /* maybbe try a float here */
+    align-items:right;
 
-.navbar a, .navbar button {
+
+}
+ul{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+/*a{
+    display: block;
+    padding: 0rem;
+
+}*/
+.navbar ul li:nth-child(4){
+    background-color: #d5473b;
+    padding: 2rem;
+    color: #fafafa;
+}
+.navbar ul li:nth-child(4) a{
+    color: #fafafa;
+
+}
+.navbar ul li a, .navbar button {
     color: rgb(57, 53, 53); 
     text-decoration: none;
 }
-.navbar img{
+.navbar ul li a img{
     width: 6vh;
     height: 6vh;
     z-index: -1;
 
 }
 
-.navbar button {
-    background-color: white; /* Fond blanc pour tous les boutons */
-    margin-left: auto; 
-}
 
-#createButton {
-    background-color: #FF0000; /* Couleur de fond rouge pour le bouton Créer un compte */
+#create_button a {
+    color: #fafafa;
+    background-color:#fafafa; /* Couleur de fond rouge pour le bouton Créer un compte */
 }
-
+    #arrow {
+    background-color: #d5473b;
+    position: fixed;
+}
 
 .navbar-left img {
     margin-right: 1rem; 
@@ -155,31 +185,7 @@ button {
     margin-left: 5%;
     line-height: 5rem;
 }
-button[onclick*='#create'] {
-    background-color:#d5473b;
-    padding: 2rem;
-    margin: 0;
-    color: #fafafa;
 
-}
-button[onclick*='#connexion']:hover {
-    background-color:#d5473b;
-    padding: 2rem;
-    margin: 0;
-    color: #fafafa;
 
-}
-button[onclick*='#pros']:hover {
-    background-color:#d5473b;
-    padding: 2rem;
-    margin: 0;
-    color: #fafafa;
-}
-button :hover{
-    background-color: #d5473b;
-    color: #fafafa;
 
-}
-.connexion {
 
-}

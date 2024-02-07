@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <meta name="description" content="Page d'un clone de la messagerie Gmail, par Ounissa">
     <link rel="stylesheet" href="./CSS/main.css">
     <link id="mail-icon" rel="shortcut icon" href="./asset/mail.png" type="image/x-icon">
@@ -12,16 +13,12 @@
 <body>
     <header>
         <nav class="navbar" role="navigation">
-            <div class="navbar-left">
-                <button onclick="window.location.href='#home_page'">
-                    <img src="./asset/mail.png" alt="icone d'accueil Gmail">Gmail
-                </button>
-            </div>
-            <div class="navbar-right">
-                <button onclick="window.location.href='#pros'">Pour les pros</button>
-                <button onclick="window.location.href='#connexion'">Connexion</button>
-                <button onclick="window.location.href='#create'">Créer un compte</button>
-            </div>
+            <ul id="naviger">
+                <li><a href="#home_page"> <img src="./asset/mail.png" alt="logo gmail">Gmail</a></li>
+                <li><a href="#pros">Pour les Pros</a></li>
+                <li><a href="#connexion">Connexion</a></li>
+                <li><a href="#create">Créer un compte</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -29,9 +26,9 @@
         <section id="home_page" role="region" aria-label="Introduction">
             <p>Retrouvez la fluidité et la simplicité de Gmail sur tous vos appareils</p>
             <div id="create_button">
-                <button onclick="window.location.href='#create'">Créer un compte</button>
+                <a href="#create"> Créer un compte</a>
             </div>
-            <div>
+            <div id="arrow">
                 <a href="#create"><img src="./asset/arrow.png" alt="scroll down"></a>
             </div>
         </section>
