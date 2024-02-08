@@ -1,0 +1,4 @@
+%%mocodo
+:
+UTILISATEUR: id_utilisateur, nom_utilisateur, prenom_utilisateur, mail_utilisateur, password_utilisateur
+:

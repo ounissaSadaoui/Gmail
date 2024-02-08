@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <meta name="description" content="Page d'un clone de la messagerie Gmail, par Ounissa">
+        <link id="mail-icon" rel="shortcut icon" href="./asset/mail.png" type="image/x-icon">
+        <link rel="manifest" href="favicon/site.webmanifest">
+        <link rel="stylesheet" href="./CSS/main.css">
+        <title>Page de connexion</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar" role="navigation">
+                <a id="logo_g" href="index.html"> <img src="./asset/mail.png" alt="logo gmail">Gmail</a>
+                <a id="btn_pros" href="#pros">Pour les Pros</a>
+                <a id="btn_connexion" href="connexion.html" target="_blank">Connexion</a>
+                <a id="btn_creation" href="index.html">Créer un compte</a>
+            </nav>
+        </header>   
+    
+
+    <section id="connexion"  aria-label="Connexion">
+       <h2>Bienvenue dans votre espace</h2>
+    <div class="inner-form" role="form" aria-labelledby="connexion">
+        <form action="index.html" method="post">
+            <fieldset>
+                <legend>Connectez-vous à votre compte</legend>
+                
+                <label for="login-mail">
+                    Mail ou Login *
+                </label>
+                <input 
+                    id="login-mail"
+                    type="email"
+                    name="email"
+                    placeholder="votreMail@gmail.com" 
+                    aria-required="true"
+                    >
+                
+                <label for="login-motdepasse">
+                    Mot de passe *
+                </label>
+                <input 
+                    id="login-motdepasse"
+                    type="password"
+                    name="motdepasse"
+                    placeholder="Saisissez un mot de passe" 
+                    aria-required="true"
+                    >
+
+                <input type="submit" value="CONNEXION A VOTRE COMPTE">                       
+            </fieldset>
+        </form>
+    </div>
+</section>
+</html>

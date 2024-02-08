@@ -121,6 +121,7 @@ nav a img {
 }
 
 /* Styles pour le texte au-dessus du bouton */
+
 #home_page p {
     font-size: 3.6rem; /* Taille de police plus grande */
     color: white; /* Texte en blanc */
@@ -129,3 +130,8 @@ nav a img {
     margin-left: 5%;
     line-height: 5rem;
 }
+a:focus {
+    background-color: #d5473b;
+    color: #fff;
+}
+
