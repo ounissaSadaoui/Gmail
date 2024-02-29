@@ -1,16 +1,7 @@
+<?php
+include_once "./controller/head.inc.php"
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <meta name="description" content="Page d'un clone de la messagerie Gmail, par Ounissa">
-    <link id="mail-icon" rel="shortcut icon" href="./asset/mail.png" type="image/x-icon">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="stylesheet" href="./CSS/main.css">
-    <title>Gmail</title>
-</head>
+?>
 <body>
     <header>
         <nav class="navbar" role="navigation">
@@ -29,13 +20,19 @@
                 <a href="#create"><img src="./asset/arrow.png" alt="scroll down"></a>
             </div>
         </section>
+        <?php
+        
+        require_once __DIR__ . "/controller/controller_base.class.php";
+        ControlloerBase::event();
+        ?>
+
 
         <section id="create" role="region" aria-label="Création de compte">
             <h2>Une boîte de réception entièrement repensée</h2>
             <p>Avec les nouveaux onglets personnalisables, repérez immédiatement les nouveaux messages et choisissez ceux que vous souhaitez lire en priorité</p>
 
             <div class="form-creation" role="form" aria-labelledby="inscription">
-                <form action="index.html" method="post">
+                <form action="index.php" method="post">
                     <fieldset>
                         <legend>Créer un compte</legend>
                         
