@@ -1,7 +1,7 @@
 <?php    
   include_once "./controller/head.inc.php";
   require_once __DIR__ . "/controller/controller_base.class.php";
-  ControlloerBase::event();
+  ControllerBase::event();
 ?>
     <header>
         <nav class="navbar" role="navigation">
@@ -13,7 +13,7 @@
     </header>   
     
     <section id="connexion"  aria-label="Connexion">
-       <h2>Bienvenue dans votre espace</h2>
+       <h2>Bienvenue dans votre espace <?php print ControllerBase::event().$_name ?></h2>
     <div class="inner-form" role="form" aria-labelledby="connexion">
         <form action="index.php" method="post">
             <fieldset>

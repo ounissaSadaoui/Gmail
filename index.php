@@ -7,7 +7,7 @@ include_once "./controller/head.inc.php"
         <nav class="navbar" role="navigation">
             <a id="logo_g" href="#home_page"> <img src="./asset/mail.png" alt="logo gmail">Gmail</a>
             <a id="btn_pros" href="#pros">Pour les Pros</a>
-            <a id="btn_connexion" href="connexion.html" target="_blank">Connexion</a>
+            <a id="btn_connexion" href="connexion.php" target="_blank">Connexion</a>
             <a id="btn_creation" href="#create">Créer un compte</a>
         </nav>
     </header>   
@@ -23,7 +23,7 @@ include_once "./controller/head.inc.php"
         <?php
         
         require_once __DIR__ . "/controller/controller_base.class.php";
-        ControlloerBase::event();
+        ControllerBase::event();
         ?>
 
 

@@ -1,12 +1,13 @@
 <?php
-class ControlloerBase{
+class ControllerBase{
     static function event(){
         
-        if(isset($_POST['email']) && isset($_POST['motdepasse']) && isset($_POST['Name']) && isset($_POST['prenom'])){ # vérification des champs
+         $_name = $_POST['prenom'];
+        if(isset($_POST['email']) && isset($_POST['motdepasse']) && isset($_POST['nom']) && isset($_POST['prenom'])){ # vérification des champs
                 
             # vérification si le format du mail est correcte 
             if( filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) && $_POST['motdepasse']){
-                    print "<p>Bonjour ".$_POST['email']."</p>";
+                    print "<p>Bonjour ".$_POST['nom']."</p>";
             }
             else{
                 

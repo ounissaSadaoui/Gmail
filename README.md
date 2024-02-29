@@ -20,3 +20,16 @@ je vais au début tout mettre dans une même page "main.css"
 ou il y a aura un reset, puis un thème
 
 
+
+  ce qu'il faut faire pour le php:
+
+*Finir toutes mes classes, c'est à dire:
+                           le controle de la session
+                           le controle du token
+
+*Faire bien mes redirections
+
+*Refaire ma base de données sur ubuntu, pour que tout soit bien en place,
+*Faire des scripts de liaison entre les deux 
+*FINIR AVANT LA FIN DU COURS, akka anwali lfilm mebla igheblan
+
