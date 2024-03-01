@@ -1,6 +1,4 @@
 <?php
-
-
 class UserManager {
 
     static function insertUser() {
@@ -8,7 +6,7 @@ class UserManager {
 
         try {
             // Connexion à la base de données avec PDO
-            $connexion = new PDO("mysql:host=$serveur;dbname=$nomBaseDeDonnees", $utilisateur, $motDePasse);
+            $connexion = new PDO("mysql:host=$serveur;dbname= 'users_gmail'", $utilisateur, $motDePasse);
         
             // Afficher les erreurs PDO
             $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

@@ -48,12 +48,15 @@ input {
 }
 input[type="submit"][value="VALIDER VOTRE COMPTE"] {
     color: #fafafa;
-    width: 45%;
-    height: 9vh;
+    width: max-content;
+    height: 3.7rem;
     text-align: center;
     background-color:#2753ce;
-    margin-left: 27%;
-    margin-right: 27%;
+    display: block;
+    margin: auto;
+    padding: 1rem;
+
+
 
 }
 
