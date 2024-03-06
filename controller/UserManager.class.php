@@ -18,7 +18,7 @@ class UserManager {
                 $motDePasse = $_POST["mot_de_passe"];
         
                 // Vérifier si l'utilisateur existe déjà dans la base de données
-                $_requete_Verif = $connexion->prepare("SELECT id FROM utilisateurs WHERE login = ?");
+                $_requete_Verif = $connexion->prepare("SELECT id FROM users WHERE login = ?");
                 $_requete_Verif->bindParam(1, $login);
                 $_requete_Verif->execute();
         

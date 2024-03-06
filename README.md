@@ -16,8 +16,48 @@ on utilise une navbar pour les boutons de navigation du haut de la page, ainsi q
 ```
 * Passons au css de la page:
 Une fois le squelette html prêt, on peut commencer à mettre en forme en css.
-je vais au début tout mettre dans une même page "main.css"
-ou il y a aura un reset, puis un thème
+
+  J'ai fait le fait le choix de diviser la mise en page css en 3 parties:
+  * main: pour le reset de la page
+  * forms: pour l'apparence des formulaires
+  * theme : pour l'apparence générale du projet
+
+  Ppour ne faire qu'une seule inclusion dans la page d'index, je mets des liens d'import dans le main.css et je n'ai alors besoin que d'une ligne d'inclusion de css:
+  ```html 
+      <link rel="stylesheet" href="./CSS/main.css">
+```
+les lignes d'import dans le main.css sont ainsi faites:
+```css
+@import url("./forms.css");
+@import url("./theme.css");
+```
+Ensuite, pour ce qui est des pages de connexion et de création de compte:
+ * La page de création de compte est incluse dans la page d'index principale.
+ * La page de connexion est une page html indépendante, à laquelle on renvoit l'utilisateur dès lors qu'il sélectionne l'option de connexion dans la barre de navigation:
+ ```html 
+             <a id="btn_connexion" href="connexion.html" target="_blank">Connexion</a>
+```
+### Création du favicon:
+Comme d'habitude, avec le site: https://favicon.io/favicon-converter/
+
+On inclus le webmanifest ainsi que les icones dans notre projet, en faisant en sorte de bien choisir les bons formats pour les icônes.
+
+On ajoute aussi la ligne correspondant au manifest dans le head du html :
+```html 
+        <link rel="manifest" href="favicon/site.webmanifest">
+```
+
+Maintenant, avec ses modifications apportées, dans la fenêtre devTools, dans applications, on voit bien le manifeste avec les icônes.
+
+## Deuxième étape: Création d'une version Dynamique de la page en PHP:
+
+Pour parvenir à cela, on créé une page index.php, dans laquelle on copie-colle l'index.html.
+Le but est de l'épurer au maximum, c'est pourquoi nous allons créer dans notre projet un répertoire "controller", on y mettra un "head.inc.php", contenant l'en-tête de notre projet.
+
+Dans la page index.php, on n'aura alors qu'à ajouter les inclusions de fichiers importants. Comme ceci:
+```php
+include_once "./controller/head.inc.php"
+```
 
 
 
