@@ -1,60 +1,41 @@
 /* Styles pour la barre de navigation */
 #barre {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 1rem 1rem gray;
+    box-shadow: 0 .8rem 0.8rem rgb(155, 154, 154);
     position: fixed;
     background-color: #fff;
     width: 100%;
     color: #000000; 
     height: 10vh;
-
+    font-weight: 300;
+    border: .1rem solid #282727;
+    text-shadow: 1px 1px 2px rgb(42, 40, 40);
 }
-
+.navbar li a {
+    margin-left: 2rem;  /*espace etre les elts */
+}
 #logo_g {
-    color: #000000; 
-}
-
-#barre-navigation {
     display: flex;
-    justify-content: flex-end; /* Aligner les éléments à droite de la barre de navigation */
-}
+    align-items: center;
 
-
-.navbar li {
-    display: inline-block;
-    margin-left: 1.5rem; /* Espacement entre les éléments de la barre de navigation */
 }
 
 #btn_creation {
-    background-color: #d5473b; /* Couleur de fond rouge pour le lien "Créer un compte" */
+    background-color: #d5473b; 
     color: #ffffff; 
     padding: 2rem; 
-    border-radius: 5px; 
+    border-radius: .2rem; 
 }
 
 #barre a img {
     display: inline-block;
     max-height: 7vh;
     max-width: 7vh;
-    padding-right: .5rem;
+    padding-right: .8rem;
 }
-/*
-#logo_g  {
-    position: fixed;
-    left: .1rem;
-    width: 10%;
-    text-align: left;
- }
-
-
-
-#btn_creation {
-    background-color: #d5473b;
-    color: #fff;
-    padding: 2rem;
-}*/
 
 /* style pour ma navbar */
 
@@ -70,7 +51,7 @@
     right: 2rem;
     bottom: 2.5rem;
     border-radius: 2.7rem ;
-}
+  /*   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); Exemple d'ombre */}
 
 /* Styles pour la section "home_page" */
 
@@ -136,7 +117,7 @@
 
 #home_page p {
     font-size: 3.6rem; /* Taille de police plus grande */
-    color: white; /* Texte en blanc */
+    color: white; 
     margin-bottom: 2vh; /* Marge en bas pour séparer du bouton */
     margin-right: 55%;
     margin-left: 5%;
