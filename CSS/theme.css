@@ -2,10 +2,10 @@
 .navbar {
     position: fixed; /* Position fixée */
     width: 100%;
-    height: 9vh; /* Hauteur de 10 vh */
+    height: 8vh; /* Hauteur de 10 vh */
     display: inline-block;
     justify-content: space-between;
-    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.1); 
+    box-shadow:0 1rem 2rem rgb(197, 195, 195);  
     padding-top: 1rem;
     background-color:#ffffff ;
     text-align: right;
@@ -13,57 +13,53 @@
 }
 nav a img {
     display: inline-block;
-    max-height: 6vh;
-    max-width: 6vh;
-    padding-right: .1rem;
-    vertical-align: middle;
+    max-height: 7vh;
+    max-width: 7vh;
+    padding-right: .5rem;
+      /* vertical-align: middle;*/
 }
+
 #logo_g  {
     position: fixed;
-    left: 0;
+    left: .1rem;
     width: 10%;
     text-align: left;
  }
 
-#btn_connexion , #btn_pros{
-    padding: 2rem;
+#btn_connexion , #btn_pros, #btn_creation {
+    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 #btn_creation {
     background-color: #d5473b;
     padding: 2rem;
-    margin-bottom: 0rem;
     color: #fff;
     
 }
 
-
 /* style pour ma navbar */
-#create_button a{
-    color: #fff;
-    background-color: #d5473b;
-  
-}
+
 #create_button {
     display: block;
     border-radius: .4rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding: 2rem;
+    
 }
 #arrow {
     background-color: #d5473b;
     position: fixed;
     right: 2rem;
-    bottom: 2rem;
-    border-radius: 2.5rem;
+    bottom: 2.5rem;
+    border-radius: 2.7rem ;
 }
 
 /* Styles pour la section "home_page" */
 #home_page {
     background :url(../asset/home-hero.jpg) center center/ cover fixed;
-    height: 100vh; /* Hauteur de 100 vh pour prendre toute la hauteur de l'écran */
+    height: 89vh; /* Hauteur de 100 vh pour prendre toute la hauteur de l'écran */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,7 +69,7 @@ nav a img {
     
 /*styple pour la secion de connexion */
 #connexion{
-    height: 100vh; 
+    height: 91vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,5 +129,7 @@ nav a img {
 a:focus {
     background-color: #d5473b;
     color: #fff;
+    size: 4vh;
 }
+
 

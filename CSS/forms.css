@@ -1,10 +1,10 @@
 /* Styles pour le conteneur du formulaire */
 #create{
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+  /*  justify-content: center;
+    align-items: flex-start;*/
 }
 fieldset{
     border-color: #f5eded;
@@ -12,7 +12,8 @@ fieldset{
 .form-creation {
     width: 55%; 
     margin: 0 auto; 
-    padding-top: 5rem;
+   /* padding-top: 5rem;*/
+    overflow: visible;
 
 }
 form legend {
