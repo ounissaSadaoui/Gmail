@@ -16,6 +16,9 @@ body{
     background-color:  #fafafa;
     font-size: 1.6rem;
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
 }
 h1,h2, h3, h4, h5, h6, p,
 ol, ul, figure, div{
@@ -34,6 +37,7 @@ ul {
 }
 a{
     text-decoration: none;
+    color: rgb(61, 58, 58);
 }
 
 img{

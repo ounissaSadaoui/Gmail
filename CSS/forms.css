@@ -88,12 +88,12 @@ input[type="submit"][value="VALIDER VOTRE COMPTE"] {
 }
 
 /* Styles pour les champs de saisie du formulaire de connexion */
-#connexion input {
+/*#connexion input {
     width: calc(100% - 2rem);
     padding: .5rem;
     margin-bottom: 1rem;
     background-color: #dfdcdc;
-}
+}*/
 
 /* Styles pour le bouton de soumission du formulaire de connexion */
 #connexion input[type="submit"] {

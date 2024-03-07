@@ -1,24 +1,46 @@
 /* Styles pour la barre de navigation */
-.navbar {
-    position: fixed; /* Position fixée */
-    width: 100%;
-    height: 8vh; /* Hauteur de 10 vh */
-    display: inline-block;
+#barre {
+    display: flex;
     justify-content: space-between;
-    box-shadow:0 1rem 2rem rgb(197, 195, 195);  
-    padding-top: 1rem;
-    background-color:#ffffff ;
-    text-align: right;
+    align-items: center;
+    box-shadow: 0 1rem 1rem gray;
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    color: #000000; 
+    height: 10vh;
 
 }
-nav a img {
+
+#logo_g {
+    color: #000000; 
+}
+
+#barre-navigation {
+    display: flex;
+    justify-content: flex-end; /* Aligner les éléments à droite de la barre de navigation */
+}
+
+
+.navbar li {
+    display: inline-block;
+    margin-left: 1.5rem; /* Espacement entre les éléments de la barre de navigation */
+}
+
+#btn_creation {
+    background-color: #d5473b; /* Couleur de fond rouge pour le lien "Créer un compte" */
+    color: #ffffff; 
+    padding: 2rem; 
+    border-radius: 5px; 
+}
+
+#barre a img {
     display: inline-block;
     max-height: 7vh;
     max-width: 7vh;
     padding-right: .5rem;
-      /* vertical-align: middle;*/
 }
-
+/*
 #logo_g  {
     position: fixed;
     left: .1rem;
@@ -26,19 +48,13 @@ nav a img {
     text-align: left;
  }
 
-#btn_connexion , #btn_pros, #btn_creation {
-    padding-left: 2rem;
-    padding-right: 1rem;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
+
 
 #btn_creation {
     background-color: #d5473b;
-    padding: 2rem;
     color: #fff;
-    
-}
+    padding: 2rem;
+}*/
 
 /* style pour ma navbar */
 
@@ -57,9 +73,10 @@ nav a img {
 }
 
 /* Styles pour la section "home_page" */
+
 #home_page {
     background :url(../asset/home-hero.jpg) center center/ cover fixed;
-    height: 89vh; /* Hauteur de 100 vh pour prendre toute la hauteur de l'écran */
+    height: 100vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,12 +86,11 @@ nav a img {
     
 /*styple pour la secion de connexion */
 #connexion{
-    height: 91vh; 
+    max-height: 91vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0 2vh;
     width: 100%;
 }
 #create > h2{
@@ -126,10 +142,10 @@ nav a img {
     margin-left: 5%;
     line-height: 5rem;
 }
-a:focus {
+li > a:focus {
     background-color: #d5473b;
     color: #fff;
-    size: 4vh;
+    padding: 2rem;
 }
 
 
