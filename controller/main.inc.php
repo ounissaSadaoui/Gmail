@@ -13,8 +13,12 @@
             <h2>Une boîte de réception entièrement repensée</h2>
             <p>Avec les nouveaux onglets personnalisables, repérez immédiatement les nouveaux messages et choisissez ceux que vous souhaitez lire en priorité</p>
 
+            <?php     
+            include_once "./controller/CreationControl.inc.php"
+             ?>
+
             <div class="form-creation" role="form" aria-labelledby="inscription">
-                <form action="index.html" method="post" id="inscription">
+                <form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post" id="inscription">
                     <fieldset>
                         <legend>Créer un compte</legend>
                         
