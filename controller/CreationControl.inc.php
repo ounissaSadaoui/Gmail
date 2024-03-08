@@ -4,11 +4,11 @@
     $dbname = "users_gmail"; 
     $dbtable = "users"; 
     $user = "phpmyadmin"; 
-    $pass = "inesjtm";
+    $password = "inesjtm";
 
     $prenom = valid_donnees($_POST["prenom"]);
     $nom = valid_donnees($_POST["nom"]);
-    $mail = valid_donnees($_POST["email"]);
+    $email = valid_donnees($_POST["email"]);
     $password = password_hash($_POST['motdepasse'],PASSWORD_DEFAULT);
 
     function valid_donnees($donnees){
@@ -18,12 +18,12 @@
         return $donnees;
     }
 
-    if (!empty($prenom)&& !empty($mail)
-        && filter_var($mail, FILTER_VALIDATE_EMAIL)){
+    if (!empty($prenom)&& !empty($email)
+        && filter_var($email, FILTER_VALIDATE_EMAIL)){
 
         try{
             // Connexion à la BDD
-            $dbco = new PDO("mysql:host=$serveur", $user, $pass);
+            $dbco = new PDO("mysql:host=$serveur", $user, $password);
             $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             // Création de la base de données si elle n'existe pas
@@ -46,11 +46,11 @@
 
             // Insertion des données
             $sth = $dbco->prepare("
-                INSERT INTO $dbtable (Nom, prenom, email, motdepasse)
-                VALUES(:nom, :prenom, :mail, :motdepasse)");
+                INSERT INTO $dbtable (nom, prenom, email, motdepasse)
+                VALUES(:nom, :prenom, :email$email, :motdepasse)");
             $sth->bindParam(':nom',$nom);
             $sth->bindParam(':prenom',$prenom);
-            $sth->bindParam(':mail',$mail);
+            $sth->bindParam(':email$email',$email);
             $sth->bindParam(':motdepasse',$password);
             $sth->execute();
 

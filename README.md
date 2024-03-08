@@ -1,6 +1,6 @@
 # Création d'un "clone" de Gmail:
 ## Première étape: Création d'une version statique de la page:
-lien vers le déploiement de la page: https://ounissasadaoui.github.io/Gmail/
+lien vers le [déploiement](https://ounissasadaoui.github.io/Gmail/) de la page: 
 * on commence par la page d'acceuil, elle doit ressembler à ceci:
 ![Image du résultat attendu](./asset/page_accueil.png) 
 * La page de connexion sera celle-ci: 
@@ -53,11 +53,28 @@ Maintenant, avec ses modifications apportées, dans la fenêtre devTools, dans a
 
 Pour parvenir à cela, on créé une page index.php, dans laquelle on copie-colle l'index.html.
 Le but est de l'épurer au maximum, c'est pourquoi nous allons créer dans notre projet un répertoire "controller", on y mettra un "head.inc.php", contenant l'en-tête de notre projet.
+ Mais aussi header.inc.php, main.inc.php, footer.inc.php.
 
-Dans la page index.php, on n'aura alors qu'à ajouter les inclusions de fichiers importants. Comme ceci:
+ On fera la même chose pour la page de connexion.
+
+ On a alors deux pages .php épurées au maximum, avec juste des inclusions comme suit:
 ```php
-include_once "./controller/head.inc.php"
+    include_once "./controller/head.inc.php"
 ```
+ ### Création de la Base de données:
+  Dans phpMyAdmin, nous allons créer une base de données: <b>users_gmail</b>, nous allons y ajouter une table, <b>users</b>
+  Elle aura les champs suivants : 
+  * nom
+  * prenom
+  * Email
+  * mot de passe 
+  * Id , avec autoInrémentation
+
+### Contrôle des utilisateurs:
+
+Pour cela, on va mettre en place 2 fichiers: connectionControl.inc.php et creationControl.inc.php.
+
+À l'intérieur de chacun des deux, nous allons d'abord donner les variables de configuration de notre base de données:
 
 
 

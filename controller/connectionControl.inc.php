@@ -5,11 +5,11 @@ $serveur = "localhost";
 $dbname = "users_gmail";
 $dbtable = "users";
 $user = "phpmyadmin";
-$pass = "inesjtm";
+$password = "inesjtm";
 
 try {
   // Connexion à la base de données
-  $connexion = new PDO("mysql:host=$serveur;dbname=$dbname", $user, $pass);
+  $connexion = new PDO("mysql:host=$serveur;dbname=$dbname", $user, $password);
   $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
