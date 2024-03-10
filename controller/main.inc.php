@@ -1,5 +1,7 @@
 
-
+<?php
+session_start();
+?>
     <main>
         <div id="home_page" role="region" aria-labelledby="Introduction">
             <p id="Introduction">Retrouvez la fluidité et la simplicité de Gmail sur tous vos appareils</p>
@@ -13,15 +15,15 @@
             <h2>Une boîte de réception entièrement repensée</h2>
             <p>Avec les nouveaux onglets personnalisables, repérez immédiatement les nouveaux messages et choisissez ceux que vous souhaitez lire en priorité</p>
 
-            <?php     
-            include_once "./controller/CreationControl.inc.php"
-             ?>
-
             <div class="form-creation" role="form" aria-labelledby="inscription">
-                <form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post" id="inscription">
+                <?php
+                      include_once __DIR__."/controller/UserManager.class.php";
+                 ?>
                     <fieldset>
                         <legend>Créer un compte</legend>
-                        
+                        <form method="post" action="<?= $_SERVER["PHP_SELF"]; ?>" id="inscription">
+
+
                         <label for="nom">
                             Nom *
                         </label>
@@ -66,9 +68,9 @@
                             aria-required="true"
                             >
                         
-                        <input type="submit" value="VALIDER VOTRE COMPTE">                       
-                    </fieldset>
-                </form>
+                        <input type="submit" value="VALIDER VOTRE COMPTE">   
+                     </form>
+                </fieldset>
             </div>
         </div>      
     </main>

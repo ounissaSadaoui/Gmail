@@ -1,33 +1,72 @@
-	    <?php
-	    if ($_SESSION['user_created'] == 'true')
-	    {
-		echo "<script>showNotification('Votre compte a bien été créé, veuillez vous connectez', 'success');</script>";
-		$_SESSION['user_created'] = 'false';
-	    }
-	    ?>
-	    <div id="logInForm" class="form">
-		<?php
-		use pages\controller\UserManager;
+<?php
 
-		include_once './controller/UserManager.class.php';
 
-		UserManager::logIn();
-		?>
-		<div class="form__title">Connectez-vous à votre compte</div>
-		<form action="<?php print htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-		    <ul class="form__content">
-		        <li class="form__question">
-		            <label class="form__label" for="mail">Mail : *</label>
-		            <input class="form__input" type="email" id="mail" name="user_mail" placeholder="Votre mail">
-		        </li>
-		        <li class="form__question">
-		            <label class="form__label" for="password">Mot de passe : *</label>
-		            <input class="form__input" type="password" id="password" name="user_password" placeholder="Votre mot de passe">
-		        </li>
-		        <li class="form__submit">
-		            <input class="btn btn__square btn--blue text--uppercase" type="submit" value="Envoyer">
-		        </li>
-		    </ul>
-		</form>
-	    </div>
-	</main>
+class UserManager {
+
+    static function insertUser() {
+        require_once('config.php'); # ceci est le fichier de configuration de la base de données, il faut oujours l'inclure 
+
+        try {
+            // le PDO est ce qui permet une connexion à la bdd, grâce aux infos récupérées dans config.php
+            $connexion = new PDO("mysql:host=$serveur;dbname=$nomBaseDeDonnees", $utilisateur, $motDePasse);
+        
+            // Afficher les erreurs PDO
+            $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
+            // Vérifier si le formulaire a été soumis
+            if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+                // Récupérer le login et le mot de passe du formulaire
+                $nom = $_POST["nom"];
+				$prenom = $_POST["prenom"];
+                $login = $_POST["email"];
+                $motDePasse = $_POST["motdepasse"];
+        
+                // Vérifier si l'utilisateur existe déjà dans la base de données
+                $_requete_Verif = $connexion->prepare("SELECT id FROM users WHERE email = ?");
+                $_requete_Verif->bindParam(1, $login);
+                $_requete_Verif->execute();
+        
+                if ($_requete_Verif->rowCount() > 0) {
+                    // L'utilisateur existe déjà, afficher un message d'erreur
+                    print '<p class="warning msg-alert">Un compte existe déjà avec cette adresse, veuillez en choisir une autre.</p>';
+                } 
+                else 
+                {
+                    // L'utilisateur n'existe pas, procéder à l'insertion
+                    if (!empty($nom)&& !empty($prenom) && !empty($login) && !empty($motDePasse) && filter_var($login, FILTER_VALIDATE_EMAIL)) {
+                        $motDePasseHash = password_hash($motDePasse, PASSWORD_DEFAULT);
+            
+                        // Préparer la requête SQL pour insérer les données dans la base de données
+                        $requete = $connexion->prepare("INSERT INTO users (nom, prenom, email, motdepasse) VALUES (?, ?, ?, ?)");
+                
+                        // Binder les paramètres
+                        $requete->bindParam(1, $nom); print '<p class="warning msg-success">'.$login.' : binding du nom réussi !</p>';
+
+                        $requete->bindParam(2, $prenom);
+                        $requete->bindParam(3, $login);
+                        $requete->bindParam(4, $motDePasseHash);
+
+                       
+                    
+                        // Exécuter la requête
+                        $requete->execute();
+                    
+                        print '<p class="warning msg-success">'.$login.' : Enregistrement réussi !</p>';
+        
+                    } else {
+                        print '<p class="warning msg-alert">Tous les champs sont obligatoires ou mail invalide</p>';
+                    }
+                }
+        
+                // Fermer la connexion
+                $connexion = null;
+            }
+        } catch (PDOException $e) {
+            echo '<p class="warning msg-alert">Erreur de connexion à la base de données : </p>' . $e->getMessage();
+        }
+    }
+}
+
+// Utilisation
+UserManager::insertUser();
+?>
