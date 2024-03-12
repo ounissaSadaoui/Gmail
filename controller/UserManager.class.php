@@ -16,7 +16,7 @@ class UserManager {
             // Vérifier si le formulaire a été soumis
             if ($_SERVER["REQUEST_METHOD"] == "POST") { 
                 // Récupérer le login et le mot de passe du formulaire
-                $nom = $_POST["nom"];
+                $nom = $_POST["Nom"];
 				$prenom = $_POST["prenom"];
                 $login = $_POST["email"];
                 $motDePasse = $_POST["motdepasse"];
@@ -33,15 +33,14 @@ class UserManager {
                 else 
                 {
                     // L'utilisateur n'existe pas, procéder à l'insertion
-                    if (!empty($nom)&& !empty($prenom) && !empty($login) && !empty($motDePasse) && filter_var($login, FILTER_VALIDATE_EMAIL)) {
+                    if (!empty($login) && !empty($motDePasse) && !empty($nom)&& !empty($prenom) && filter_var($login, FILTER_VALIDATE_EMAIL)) {
                         $motDePasseHash = password_hash($motDePasse, PASSWORD_DEFAULT);
             
                         // Préparer la requête SQL pour insérer les données dans la base de données
-                        $requete = $connexion->prepare("INSERT INTO users (nom, prenom, email, motdepasse) VALUES (?, ?, ?, ?)");
+                        $requete = $connexion->prepare("INSERT INTO users (nom, prenom, email, motDePasse) VALUES (?, ?, ?, ?)");
                 
                         // Binder les paramètres
-                        $requete->bindParam(1, $nom); print '<p class="warning msg-success">'.$login.' : binding du nom réussi !</p>';
-
+                        $requete->bindParam(1, $nom); 
                         $requete->bindParam(2, $prenom);
                         $requete->bindParam(3, $login);
                         $requete->bindParam(4, $motDePasseHash);
@@ -50,6 +49,17 @@ class UserManager {
                     
                         // Exécuter la requête
                         $requete->execute();
+
+                        if ($requete->execute()) {
+                            // Démarrer ou continuer la session
+                            session_start();
+                          //ici on récupère le prenom, c'est ça qu'on veut afficher à la page
+                            $_SESSION['prenom'] = $prenom;
+                            
+                            // Rediriger vers connecton.php
+                            header('Location: ./connection.php');
+                            exit; // Assure-toi d'appeler exit après une redirection pour arrêter l'exécution du script
+                        }
                     
                         print '<p class="warning msg-success">'.$login.' : Enregistrement réussi !</p>';
         

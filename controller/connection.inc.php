@@ -1,6 +1,17 @@
 
 <div id="connexion"  aria-labelledby="Connexion">
-       <h2>Bienvenue dans votre espace</h2>
+    
+    <?php
+   if (isset($_SESSION['prenom'])) {
+    $prenom = $_SESSION['prenom'];
+    ?>
+
+    <h2>Bienvenue dans votre espace, <?php echo htmlspecialchars($prenom); ?>!</h2>
+    <?php
+} else {
+        echo "Vous n'avez pas encore de compte !";
+}
+?>
 
        <?php     
             include_once "./controller/connectionControl.inc.php"

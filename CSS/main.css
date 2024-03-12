@@ -47,3 +47,17 @@ img{
     object-fit: cover;
     vertical-align: middle;
 }
+.form-action .msg-alert{
+    background: #b71540;
+    color: #fff;
+}
+.form-action .warning{
+    padding: 1rem;
+    line-height: 2.5rem;
+    text-align: center;
+    border-radius: .4rem;
+}
+.form-action .msg-success{
+    background: #079992;
+    color: #fff;
+}

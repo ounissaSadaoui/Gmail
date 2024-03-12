@@ -46,6 +46,7 @@
                                 name="Nom"
                                 placeholder="Votre nom" 
                                 aria-required="true"
+                                autofocus
                                 >
                             
                             <label for="prenom">
