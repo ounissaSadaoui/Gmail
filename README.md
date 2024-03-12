@@ -64,29 +64,38 @@ Le but est de l'épurer au maximum, c'est pourquoi nous allons créer dans notre
  ### Création de la Base de données:
   Dans phpMyAdmin, nous allons créer une base de données: <b>users_gmail</b>, nous allons y ajouter une table, <b>users</b>
   Elle aura les champs suivants : 
-  * nom
+  * Nom
   * prenom
-  * Email
+  * email
   * mot de passe 
   * Id , avec autoInrémentation
 
 ### Contrôle des utilisateurs:
 
-Pour cela, on va mettre en place 2 fichiers: connectionControl.inc.php et creationControl.inc.php.
+Pour cela, on va mettre en place 2 fichiers: config.php et UserManager.class.inc.php
 
-À l'intérieur de chacun des deux, nous allons d'abord donner les variables de configuration de notre base de données:
+Dans <b>config.php </b>: <br>
+
+On renseigne les inormations concernant notre base de données
+Dans <b>UserManager.class.inc.php </b>: <br>
+C'est ici qu'on met en place le script de remplissage de la table des utilisateurs dans la BDD.
+On commence avec le rappel de la configuration de la BDD :
+```php
+        require_once('config.php'); # ceci est le fichier de configuration de la base de données, il faut oujours l'inclure 
+```
+Ensuite, on invoque le PDO :
+```php
+            $connexion = new PDO("mysql:host=$serveur;dbname=$nomBaseDeDonnees", $utilisateur, $motDePasse);
+```
+avec in isSet, on vérifie bien que tous les champs du formualaire sont renseignés, 
+Si c'est le cas, on les insère dans la table
+Puis on redirige l'utilisateur vers la page connection.php.
 
 
 
-  ce qu'il faut faire pour le php:
 
-*Finir toutes mes classes, c'est à dire:
-                           le controle de la session
-                           le controle du token
 
-*Faire bien mes redirections
 
-*Refaire ma base de données sur ubuntu, pour que tout soit bien en place,
-*Faire des scripts de liaison entre les deux 
-*FINIR AVANT LA FIN DU COURS, akka anwali lfilm mebla igheblan
+
+
 
