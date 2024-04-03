@@ -87,7 +87,9 @@
                     </fieldset>
                 </div>
             </div>      
-        </main>   // include_once __DIR__ ."/controller/footer.inc.php";
-?>
+        </main>  
+        <?php
+        include_once __DIR__ ."/controller/footer.inc.php"; 
+        ?>
 </body>
 </html>

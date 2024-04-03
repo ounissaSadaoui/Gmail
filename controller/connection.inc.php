@@ -11,7 +11,7 @@
    
     <div class="inner-form" role="form" id="Connexion">
         <?php     
-          include_once __DIR__ ."config.inc.php";
+          include_once __DIR__ ."config.php";
         //   include_once __DIR__."/controller/connectionVerif.inc.php";
 
           
