@@ -49,12 +49,11 @@
 
             if ((isset($_POST["mail"]) )){
             $mail = $_POST['mail'] ?? '';
-             var_dump($mail);
+           
 
             }
             if ((isset($_POST["motdepasse_"]) )){
             $mdp = $_POST['motdepasse_'] ?? '';
-            var_dump($mdp);
 
             }
 
@@ -94,15 +93,14 @@
       
         } else {
             echo "Email ou mot de passe incorrect.";
-            var_dump($user);
-
+          
         }
     } catch (PDOException $e) {
         echo "Erreur de connexion à la base de données"; 
     }
 }
     else{
-        echo "première conditioj non satisfaite.";
+        echo "première condition non satisfaite.";
 
     }
 

@@ -26,7 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       
         } else {
             echo "Email ou mot de passe incorrect.";
-            var_dump($user);
 
         }
     } catch (PDOException $e) {
