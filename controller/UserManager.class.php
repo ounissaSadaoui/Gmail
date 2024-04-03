@@ -49,17 +49,18 @@ class UserManager {
                     
                         // Exécuter la requête
                         $requete->execute();
-
-                        if ($requete->execute()) {
-                            // Démarrer ou continuer la session
-                            session_start();
-                          //ici on récupère le prenom, c'est ça qu'on veut afficher à la page
-                            $_SESSION['prenom'] = $prenom;
+                        $_SESSION['prenom'] = $prenom;
                             
-                            // Rediriger vers connecton.php
-                            header('Location: ./connection.php');
-                            exit; // Assure-toi d'appeler exit après une redirection pour arrêter l'exécution du script
-                        }
+                        // Rediriger vers connecton.php
+                        header('Location: ./connection.php');
+                        exit; // Assure-toi d'appeler exit après une redirection pour arrêter l'exécution du script
+
+                     //   if ($requete->execute()) {
+                            // Démarrer ou continuer la session
+                         //   session_start();
+                          //ici on récupère le prenom, c'est ça qu'on veut afficher à la page
+                          
+                      //  }
                     
                         print '<p class="warning msg-success">'.$login.' : Enregistrement réussi !</p>';
         

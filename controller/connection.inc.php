@@ -77,11 +77,7 @@
     try {
 
         $connexion = new PDO("mysql:host=$serveur;dbname=$nomBaseDeDonnees", $utilisateur, $motDePasse);
-        echo "construit le pdo";
-
-
         $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
         $requete = $connexion->prepare("SELECT motdepasse FROM users WHERE email = ?");
         $requete->execute([$mail]);
         $user = $requete->fetch(PDO::FETCH_ASSOC);
@@ -99,19 +95,6 @@
         echo "Erreur de connexion à la base de données"; 
     }
 }
-    else{
-        echo "première condition non satisfaite.";
-
-    }
-
-?>
-      
-    </div>
-</div>
-
-
-    <?php
-
 } else {
         echo "Vous n'avez pas encore de compte !";
 }

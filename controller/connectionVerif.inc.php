@@ -1,6 +1,6 @@
 
 <?php
-//include_once __DIR__ . "/controller/config.php"; 
+include_once __DIR__ . "/controller/config.php"; 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $mail = $_POST['mail'];
@@ -31,9 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     } catch (PDOException $e) {
         echo "Erreur de connexion à la base de données"; 
     }
-}
-    else{
-        echo "première conditioj non satisfaite.";
+    }else{
+        echo "première condition non satisfaite.";
 
     }
 
